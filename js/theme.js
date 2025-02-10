@@ -23,24 +23,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
         navLinks.classList.toggle('active');
-        mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
-        mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.nav-container') && !e.target.closest('.mobile-menu-btn')) {
+            mobileMenuBtn.classList.remove('active');
             navLinks.classList.remove('active');
-            mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            document.body.style.overflow = '';
         }
     });
 
-    // Close menu when clicking a link
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
             navLinks.classList.remove('active');
-            mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            document.body.style.overflow = '';
         });
     });
 });
