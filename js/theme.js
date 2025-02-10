@@ -1,20 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector('.theme-toggle');
     const icon = themeToggle.querySelector('i');
+
+    function isMobile() {
+        return window.matchMedia('(max-width: 768px)').matches;
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    let defaultTheme;
     
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateIcon(savedTheme === 'dark');
+    if (savedTheme) {
+        defaultTheme = savedTheme;
+    } else {
+        defaultTheme = isMobile() ? 'light' : 'dark';
+        localStorage.setItem('theme', defaultTheme);
+    }
+    
+    document.documentElement.setAttribute('data-theme', defaultTheme);
+    updateIcon(defaultTheme === 'dark');
     
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
+
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateIcon(newTheme === 'dark');
     });
-    
+
     function updateIcon(isDark) {
         icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
     }
