@@ -425,10 +425,65 @@ nav {
 }
 
 @media (max-width: 768px) {
-    nav {
-        padding: 0.5rem 1rem;
+    /* Existing styles... */
+
+    /* Fix horizontal spacing */
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
     }
-    
+
+    nav {
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    .logo {
+        padding-left: 0.5rem;
+    }
+
+    main {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #hero {
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    #features {
+        width: 100%;
+        padding: 6rem 1rem 2rem;
+    }
+
+    .features-grid {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    .feature-card {
+        width: 100%;
+        margin: 0;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .footer-content {
+        padding: 2rem 1rem;
+    }
+
     .logo h1 {
         font-size: 1.6rem;
     }
@@ -548,7 +603,7 @@ nav {
             rgba(255, 255, 255, 0.8),
             rgba(255, 255, 255, 0.6) 60%,
             rgba(255, 255, 255, 0.4) 80%
-        ), url('../cherry-mobile.png') !important;
+        ), url('../media/cherry-mobile.png') !important;
         background-size: cover !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
@@ -559,7 +614,7 @@ nav {
             rgba(10, 15, 45, 0.85),
             rgba(26, 27, 75, 0.8) 60%,
             rgba(26, 27, 75, 0.6) 80%
-        ), url('../cherry-mobile.png') !important;
+        ), url('../media/cherry-mobile.png') !important;
         background-size: cover !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
@@ -580,6 +635,23 @@ nav {
 }
 
 @media (max-width: 480px) {
+    /* Additional adjustments for smaller screens */
+    .hero-content {
+        padding: 1rem 0.5rem;
+    }
+
+    .features-grid {
+        padding: 0.5rem;
+    }
+
+    .feature-card {
+        padding: 2rem 1rem;
+    }
+
+    .footer-content {
+        padding: 1.5rem 0.5rem;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
     }
@@ -689,7 +761,7 @@ main {
         rgba(255, 255, 255, 0.8),
         rgba(255, 255, 255, 0.6) 60%,
         rgba(255, 255, 255, 0.4) 80%
-    ), url('../cherry.png');
+    ), url('../media/cherry.png');
     background-size: 100% auto;
     background-position: center 60%;
     background-repeat: no-repeat;
@@ -701,7 +773,7 @@ main {
         rgba(10, 15, 45, 0.85),
         rgba(26, 27, 75, 0.8) 60%,
         rgba(26, 27, 75, 0.6) 80%
-    ), url('../cherry.png');
+    ), url('../media/cherry.png');
     background-size: 100% auto;
     background-position: center 60%;
     background-repeat: no-repeat;
@@ -711,7 +783,7 @@ main {
     background: linear-gradient(
         rgba(10, 15, 45, 0.85),
         rgba(26, 27, 75, 0.9)
-    ), url('../cherry.png');
+    ), url('../media/cherry.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
