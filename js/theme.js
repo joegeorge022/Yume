@@ -20,4 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateIcon(isDark) {
         icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
     }
-}); 
+});
