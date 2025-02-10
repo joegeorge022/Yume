@@ -86,8 +86,6 @@ nav {
     display: flex;
     gap: 3rem;
     list-style: none;
-    transition: all 0.3s ease-in-out;
-    transform-origin: top;
 }
 
 .nav-links a {
@@ -386,26 +384,7 @@ nav {
     }
 
     .nav-links {
-        transform: scaleY(0);
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    .nav-links.active {
-        transform: scaleY(1);
-        opacity: 1;
-        pointer-events: all;
-        transition: transform 0.3s ease-in-out,
-                    opacity 0.2s ease-in-out;
-    }
-
-    .nav-links a {
-        transform: translateY(-10px);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .nav-links.active a {
-        transform: translateY(0);
+        display: none;
     }
 
     .mobile-menu-btn {
@@ -421,6 +400,20 @@ nav {
 
     [data-theme="dark"] .mobile-menu-btn {
         color: #fff;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--header-bg);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        gap: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .hero-content {
