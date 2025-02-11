@@ -43,45 +43,58 @@
 }
 
 .journey-card {
-    background: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
     padding: 2.5rem 2rem;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(137, 207, 240, 0.1);
+    box-shadow: 0 4px 15px rgba(137, 207, 240, 0.15);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    transition: none;
+    border: 1px solid rgba(137, 207, 240, 0.2);
+    transition: all 0.3s ease;
 }
 
 .journey-card:hover {
-    transform: none;
-    box-shadow: 0 8px 25px rgba(137, 207, 240, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(137, 207, 240, 0.25);
+    border: 1px solid rgba(137, 207, 240, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.9));
 }
 
 .journey-card i {
     font-size: 2.5rem;
-    background: var(--gradient-primary);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.journey-card:hover i {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .journey-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--text-color);
+    color: #2a4b8c;
+    transition: color 0.3s ease;
+}
+
+.journey-card:hover h3 {
+    color: var(--secondary-color);
 }
 
 .journey-card p {
-    color: var(--text-color);
+    color: #4a5568;
     margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .journey-btn {
     padding: 0.8rem 2rem;
     font-size: 1rem;
-    background: var(--gradient-primary);
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
     color: white;
     border: none;
     border-radius: 25px;
@@ -93,11 +106,24 @@
 .journey-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(137, 207, 240, 0.3);
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
 }
 
 [data-theme="dark"] .journey-card {
     background: rgba(26, 27, 75, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .journey-card h3 {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .journey-card p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .journey-card:hover h3 {
+    color: var(--accent-color);
 }
 
 [data-theme="dark"] .gradient-overlay {
