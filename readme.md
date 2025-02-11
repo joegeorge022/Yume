@@ -1,5 +1,7 @@
 <div align="center">
+  
 # ✨ Yume Corp. ✨
+
 *Transforming Computer Science Education*
 
 ![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge&color=89CFF0)
