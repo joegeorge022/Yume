@@ -1282,3 +1282,376 @@ html {
         padding: 1.2rem;
     }
 }
+
+#testimonials {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, rgba(137, 207, 240, 0.1), rgba(255, 183, 208, 0.1));
+}
+
+#testimonials h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(137, 207, 240, 0.2);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(137, 207, 240, 0.2);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.testimonial-meta h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.testimonial-role {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin: 0.2rem 0 0 0;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.testimonial-rating {
+    color: #ffd700;
+    font-size: 1.1rem;
+}
+
+[data-theme="dark"] .testimonial-card {
+    background: rgba(26, 27, 75, 0.9);
+    border: 1px solid rgba(137, 207, 240, 0.1);
+}
+
+[data-theme="dark"] .testimonial-meta h3 {
+    color: #fff;
+}
+
+[data-theme="dark"] .testimonial-role {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .testimonial-text {
+    color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    #testimonials {
+        padding: 3rem 1rem;
+    }
+
+    #testimonials h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .testimonial-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-meta {
+        text-align: center;
+    }
+
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #testimonials {
+        padding: 2rem 0.8rem;
+    }
+
+    .testimonial-card {
+        padding: 1.2rem;
+    }
+
+    .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-meta h3 {
+        font-size: 1.1rem;
+    }
+
+    .testimonial-role {
+        font-size: 0.85rem;
+    }
+}
+
+.founders-section {
+    margin-top: 4rem;
+}
+
+.founders-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.founders-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.founder-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(137, 207, 240, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(137, 207, 240, 0.2);
+}
+
+.founder-card:hover {
+    transform: translateY(-5px);
+}
+
+.founder-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--primary-color);
+    object-fit: cover;
+}
+
+.founder-info h4 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.founder-title {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.founder-bio {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.founder-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.founder-social a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.founder-social a:hover {
+    color: var(--primary-color);
+}
+
+.mission-section {
+    margin-top: 4rem;
+}
+
+.mission-section h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.mission-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.mission-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(137, 207, 240, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(137, 207, 240, 0.2);
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.mission-card h4 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.mission-card p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+[data-theme="dark"] .founder-card,
+[data-theme="dark"] .mission-card {
+    background: rgba(26, 27, 75, 0.9);
+    border: 1px solid rgba(137, 207, 240, 0.1);
+}
+
+[data-theme="dark"] .founder-social a {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .founder-social a:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .founders-section {
+        margin-top: 3rem;
+    }
+
+    .founders-section h3,
+    .mission-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .founders-intro {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .founders-grid,
+    .mission-cards {
+        gap: 1.5rem;
+    }
+
+    .founder-card,
+    .mission-card {
+        padding: 1.5rem;
+    }
+
+    .founder-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .founders-section {
+        margin-top: 2rem;
+    }
+
+    .founders-section h3,
+    .mission-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .founders-intro {
+        font-size: 1rem;
+    }
+
+    .founder-card,
+    .mission-card {
+        padding: 1.2rem;
+    }
+
+    .founder-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .founder-info h4 {
+        font-size: 1.2rem;
+    }
+
+    .founder-title {
+        font-size: 0.9rem;
+    }
+
+    .founder-bio {
+        font-size: 0.9rem;
+    }
+}
