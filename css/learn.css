@@ -50,11 +50,11 @@
     box-shadow: 0 4px 15px rgba(137, 207, 240, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    transition: all 0.4s ease;
+    transition: none;
 }
 
 .journey-card:hover {
-    transform: translateY(-10px);
+    transform: none;
     box-shadow: 0 8px 25px rgba(137, 207, 240, 0.2);
 }
 
@@ -102,6 +102,17 @@
 
 [data-theme="dark"] .gradient-overlay {
     opacity: 0.15;
+}
+
+.journey-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.journey-card-link:hover {
+    transform: translateY(-5px);
 }
 
 @media (max-width: 768px) {

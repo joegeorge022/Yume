@@ -78,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Logo text animation
     const logo = document.querySelector('.logo');
     const primaryText = document.querySelector('.logo-text.primary');
     const secondaryText = document.querySelector('.logo-text.secondary');
