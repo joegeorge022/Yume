@@ -242,13 +242,31 @@
         font-size: 2.2rem;
     }
 
-    .course-content,
+    .course-content {
+        padding: 1rem;
+        margin: 0;
+    }
+
     .course-features {
         padding: 1rem;
+        margin: 2rem 0;
+    }
+
+    .module-grid {
+        margin: 1rem 0;
+        padding: 0;
+        gap: 1.5rem;
     }
 
     .module-card {
         padding: 2rem 1.5rem;
+        margin: 0;
+        width: 100%;
+    }
+
+    .features-container {
+        padding: 0;
+        gap: 1.5rem;
     }
 }
 
@@ -257,7 +275,16 @@
         font-size: 2rem;
     }
 
+    .course-content {
+        padding: 1rem 0.5rem;
+    }
+
     .module-card {
         padding: 1.5rem 1rem;
+        margin: 0;
+    }
+
+    .module-grid {
+        gap: 1rem;
     }
 } 
