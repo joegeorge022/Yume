@@ -77,4 +77,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Logo text animation
+    const logo = document.querySelector('.logo');
+    const primaryText = document.querySelector('.logo-text.primary');
+    const secondaryText = document.querySelector('.logo-text.secondary');
+    let timeoutId;
+
+    function showDream() {
+        primaryText.style.opacity = '0';
+        primaryText.style.transform = 'translateY(-20px)';
+        secondaryText.style.opacity = '1';
+        secondaryText.style.transform = 'translateY(0)';
+    }
+
+    function showYume() {
+        primaryText.style.opacity = '1';
+        primaryText.style.transform = 'translateY(0)';
+        secondaryText.style.opacity = '0';
+        secondaryText.style.transform = 'translateY(20px)';
+    }
+
+    logo.addEventListener('mouseenter', () => {
+        clearTimeout(timeoutId);
+        showDream();
+        
+        timeoutId = setTimeout(() => {
+            showYume();
+        }, 3000);
+    });
 });

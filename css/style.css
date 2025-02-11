@@ -66,15 +66,92 @@ nav {
 }
 
 .logo h1 {
+    position: relative;
     text-decoration: none;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
     font-size: 2rem;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(137, 207, 240, 0.2);
     margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    min-width: 280px;
+}
+
+.logo-text {
+    position: absolute;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 120px;
+}
+
+.logo-text.primary {
+    opacity: 1;
+    transform: translateY(0);
+    left: 0;
+}
+
+.logo-text.secondary {
+    opacity: 0;
+    transform: translateY(20px);
+    left: 0;
+}
+
+.static-text {
+    margin-left: 125px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+@keyframes textSwap {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.logo:hover .logo-text.primary {
+    animation: textSwap 3s ease-in-out forwards;
+}
+
+.logo:hover .logo-text.secondary {
+    animation: textReveal 3s ease-in-out forwards;
 }
 
 .nav-container {
@@ -493,6 +570,15 @@ nav {
 
     .logo h1 {
         font-size: 1.6rem;
+        min-width: 220px;
+    }
+
+    .logo-text {
+        width: 95px;
+    }
+
+    .static-text {
+        margin-left: 100px;
     }
 
     .nav-container {
