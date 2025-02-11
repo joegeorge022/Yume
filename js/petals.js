@@ -42,17 +42,17 @@ class Petal {
     this.opacity = this.w / 40
     this.flip = Math.random()
 
-    this.xSpeed = 1.5 + Math.random() * 2
-    this.ySpeed = 1 + Math.random() * 1
-    this.flipSpeed = Math.random() * 0.03
+    this.xSpeed = 0.5 + Math.random() * 1
+    this.ySpeed = 0.3 + Math.random() * 0.5
+    this.flipSpeed = Math.random() * 0.02
   }
 
   draw() {
     if (this.y > canvas.height || this.x > canvas.width) {
       this.x = -petalImg.width
       this.y = (Math.random() * canvas.height * 2) - canvas.height
-      this.xSpeed = 1.5 + Math.random() * 2
-      this.ySpeed = 1 + Math.random() * 1
+      this.xSpeed = 0.5 + Math.random() * 1
+      this.ySpeed = 0.3 + Math.random() * 0.5
       this.flip = Math.random()
     }
     ctx.globalAlpha = this.opacity
@@ -66,8 +66,8 @@ class Petal {
   }
 
   animate() {
-    this.x += this.xSpeed + mouseX * 5
-    this.y += this.ySpeed + mouseX * 2
+    this.x += this.xSpeed + mouseX * 2
+    this.y += this.ySpeed + mouseX * 1
     this.flip += this.flipSpeed
     this.draw()
   }
