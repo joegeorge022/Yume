@@ -1,55 +1,71 @@
 <div align="center">
-
 # ✨ Yume Corp. ✨
-
 *Transforming Computer Science Education*
 
 ![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge&color=89CFF0)
 ![Status](https://img.shields.io/badge/status-beta-pink?style=for-the-badge&color=ffb7d0)
+[![Made with Love](https://img.shields.io/badge/made%20with-❤️-red?style=for-the-badge)](https://yumecorp.pages.dev)
 
+[Demo](https://yumecorp.pages.dev) • [Features](#-key-features) • [Contributing](#-contributing)
+
+![Yume Corp Preview](media/og-image.jpg)
 </div>
 
 ## 🌸 Vision
-
 Yume Corp is revolutionizing Computer Science Engineering education through an innovative platform that bridges the gap between academic theory and industry practice. Our comprehensive learning ecosystem ensures students develop both foundational knowledge and cutting-edge skills demanded by the tech industry.
 
 ## 🎯 Mission
-
 To provide Computer Science Engineering students with a state-of-the-art learning platform that combines academic excellence with industry-relevant expertise, enabling them to become proficient professionals ready for tomorrow's challenges.
 
-## ✨ Core Features
+## ✨ Key Features
+- **🤖 AI-Enhanced Learning**
+  - Personalized learning paths
+  - Adaptive difficulty scaling
+  - Real-time progress tracking
+- **🌐 Industry Integration**
+  - Direct mentorship opportunities
+  - Industry partner network
+  - Real-world project experience
+- **💻 Practical Focus**
+  - Hands-on coding exercises
+  - Industry-standard tools
+  - Portfolio development
+- **🎓 Comprehensive Curriculum**
+  - Web Development
+  - AI & Machine Learning
+  - Cloud Computing
+  - Cybersecurity
+  - Mobile Development
+  - And more...
 
-- **🤖 AI-Enhanced Learning**  
-  Advanced algorithms deliver personalized learning paths tailored to individual career trajectories
-
-- **⏰ Adaptive Learning**  
-  Flexible curriculum structure synchronized with academic requirements and industry standards
-
-- **🏢 Industry Integration**  
-  Strategic partnerships providing direct access to mentorship and internship opportunities
-
-- **💻 Applied Learning**  
-  Hands-on projects and real-world applications focusing on industry-standard practices
-
-- **🚀 Career Development**  
-  Comprehensive career support including portfolio development and placement assistance
-
-## 🌏 Market Launch
-
-Initial deployment focused in Kerala, India, with strategic expansion plans across key tech education markets.
-
-## 📫 Contact Information
-
-- **Email**: info@yumecorp.com
-- **Location**: Kerala, India
-- **Website**: [yumecorp.pages.dev](https://yumecorp.pages.dev)
+## 🤝 Contributing
+We welcome contributions! Here's how you can help:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📜 License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🌏 Deployment
+Currently deployed in Kerala, India, with plans for expansion across key educational markets.
+
+## 📫 Contact
+- **Website**: [yumecorp.pages.dev](https://yumecorp.pages.dev)
+- **Email**: info@yumecorp.com
+- **Location**: Kerala, India
+
+## 🙏 Acknowledgments
+- Our dedicated team of educators and developers
+- Our industry partners and mentors
+- The open-source community
+- Our beta testers and early adopters
 
 <div align="center">
 
-*© 2025 Yume Corp. All rights reserved.*
+---
 
+Made with ❤️ by [Yume Corp Team](https://github.com/joegeorge022)
 </div>
