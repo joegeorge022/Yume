@@ -1,6 +1,6 @@
 <div align="center">
   
-# ✨ Yume Corp. ✨
+# ✨ Yumé Corp. ✨
 
 *Transforming Computer Science Education*
 
@@ -10,11 +10,11 @@
 
 [Demo](https://yumecorp.pages.dev) • [Features](#-key-features) • [Contributing](#-contributing)
 
-![Yume Corp Preview](media/og-image.jpg)
+![Yumé Corp Preview](media/og-image.jpg)
 </div>
 
 ## 🌸 Vision
-Yume Corp is revolutionizing Computer Science Engineering education through an innovative platform that bridges the gap between academic theory and industry practice. Our comprehensive learning ecosystem ensures students develop both foundational knowledge and cutting-edge skills demanded by the tech industry.
+Yumé Corp is revolutionizing Computer Science Engineering education through an innovative platform that bridges the gap between academic theory and industry practice. Our comprehensive learning ecosystem ensures students develop both foundational knowledge and cutting-edge skills demanded by the tech industry.
 
 ## 🎯 Mission
 To provide Computer Science Engineering students with a state-of-the-art learning platform that combines academic excellence with industry-relevant expertise, enabling them to become proficient professionals ready for tomorrow's challenges.
@@ -69,5 +69,5 @@ Currently deployed in Kerala, India, with plans for expansion across key educati
 
 ---
 
-Made with ❤️ by [Yume Corp Team](https://github.com/joegeorge022)
+Made with ❤️ by [Yumé Corp Team](https://github.com/joegeorge022)
 </div>
