@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector('.theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const header = document.querySelector('header');
     
     const currentTheme = localStorage.getItem('theme') || 
                          (prefersDarkScheme.matches ? 'dark' : 'light');
@@ -20,11 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
-        
-        themeToggle.classList.add('theme-transition');
-        setTimeout(() => {
-            themeToggle.classList.remove('theme-transition');
-        }, 500);
     });
     
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -36,4 +32,24 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('active');
         });
     }
+    
+    const currentLocation = window.location.pathname;
+    const navItems = document.querySelectorAll('.nav-links a');
+    
+    navItems.forEach(item => {
+        const href = item.getAttribute('href');
+        
+        if ((href !== '/' && currentLocation.includes(href)) || 
+            (href === '/' && (currentLocation === '/' || currentLocation.endsWith('index.html')))) {
+            item.classList.add('active');
+        }
+    });
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 });
