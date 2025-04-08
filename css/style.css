@@ -11,6 +11,86 @@
     --footer-bg: rgba(240, 245, 255, 0.8);
 }
 
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background: var(--gradient-primary);
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+[data-theme="dark"] .toggle-slider {
+    transform: translateX(30px);
+    background-color: #1a1b4b;
+}
+
+.toggle-slider i {
+    font-size: 14px;
+    color: var(--primary-color);
+    transition: opacity 0.3s ease;
+}
+
+.toggle-slider .fa-moon {
+    opacity: 0;
+    position: absolute;
+    color: var(--accent-color);
+}
+
+.toggle-slider .fa-sun {
+    opacity: 1;
+}
+
+[data-theme="dark"] .toggle-slider .fa-moon {
+    opacity: 1;
+}
+
+[data-theme="dark"] .toggle-slider .fa-sun {
+    opacity: 0;
+}
+
+.toggle-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #89CFF0, #ffb7d0);
+    transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .toggle-bg {
+    background: linear-gradient(to right, #1a1b4b, #89CFF0);
+}
+
 [data-theme="dark"] {
     --primary-color: #89CFF0;
     --secondary-color: #1a1b4b;
@@ -208,11 +288,6 @@ nav {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-}
-
-.theme-toggle:hover {
-    transform: rotate(180deg) scale(1.1);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="dark"] .theme-toggle {
@@ -1087,9 +1162,25 @@ a, button, .feature-card {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.theme-toggle:hover {
-    transform: rotate(180deg) scale(1.1);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 50px;
+        height: 26px;
+    }
+    
+    .toggle-slider {
+        width: 20px;
+        height: 20px;
+    }
+    
+    [data-theme="dark"] .toggle-slider {
+        transform: translateX(24px);
+    }
+    
+    .toggle-slider i {
+        font-size: 12px;
+    }
 }
 
 @keyframes petalGlow {
